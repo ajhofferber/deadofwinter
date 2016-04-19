@@ -8,10 +8,15 @@
   src: url("../font/Domaine.otf");
 }
 
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+
 body {
   min-width: none;
   min-height: nonepx;
-  background-color: #231F20;
+  background-color: #000000;
   font-family: 'Knockout';
   color: #837451;
   -webkit-transform: none;
@@ -29,14 +34,23 @@ body {
   -o-filter: none;
   -ms-filter: none;
   filter: none;
+  -webkit-animation:fadeIn ease 1;
+  -moz-animation:fadeIn ease 1;
+  animation:fadeIn ease 1;
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+  -webkit-animation-duration:6s;
+  -moz-animation-duration:6s;
+  animation-duration:6s;
 }
 
 .wrapper{
-  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;      /* TWEENER - IE 10 */
-  display: -webkit-flex;     /* NEW - Chrome */
-  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */s
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
 }
 
 .fixedcontainer{
@@ -85,6 +99,10 @@ body {
   line-height: 1.5em;
 }
 
+.and{
+  font-size: 10px;
+}
+
 .title {
   position: absolute;
   align-content: center;
@@ -97,14 +115,13 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 5%;
   bottom: 0;
   margin-left: 20%;
   width: 60%;
 }
 
 .svg-container{
-   padding-bottom: 20%;
+  margin-bottom: 140px;
    height: 0;             /* collapse the container's height */
    width: 100%;    /* specify any width you want (a percentage value, basically) */
    /* apply a padding using the following formula */
@@ -114,8 +131,7 @@ body {
 }
 
 .title-content .text {
-  position: relative;
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
   letter-spacing: 6px;
   color: #817350;
@@ -146,6 +162,61 @@ body {
     width: 70%;
   }
 
+}
+
+@media(max-width: 680px )  and (orientation: landscape) {
+  .mini{
+    display: none;
+  }
+
+  .name{
+    font-size: 10px;
+    display: inline-block;
+  }
+
+  .header{
+    top: 30px;
+  }
+
+  .and{
+    font-size: 8px;
+  }
+
+  .footer{
+    bottom: 20px;
+    height: auto;
+  }
+
+  .title-content .text {
+    font-size: 10px;
+    letter-spacing: 4px;
+  }
+
+  .header .text{
+    width: 100%;
+    font-size: 10px;
+    letter-spacing: 4px;
+  }
+
+  .svg-container{
+    margin-bottom: 53px;
+  }
+
+  .footer .text{
+    width: 100%;
+    bottom: 5;
+    font-size: 10px;
+    letter-spacing: 4px;
+  }
+
+  .fixedcontainer{
+    border: 15px solid #817350;
+  }
+
+  .title-content {
+    margin-left: 10%;
+    width: 80%;
+  }
 }
 
 @media(max-width: 640px) {
@@ -183,19 +254,40 @@ body {
     display: inline-block;
   }
 
-  .footer{
-    bottom: 0;
+  .header{
+    top: 30px;
   }
+
+  .and{
+    font-size: 8px;
+  }
+
+  .footer{
+    bottom: 20px;
+    height: auto;
+  }
+
+
+
+  .title-content .text {
+    font-size: 10px;
+    letter-spacing: 4px;
+  }
+
   .header .text{
     width: 100%;
-    font-size: 12px;
+    font-size: 10px;
     letter-spacing: 4px;
+  }
+
+  .svg-container{
+    margin-bottom: 53px;
   }
 
   .footer .text{
     width: 100%;
     bottom: 5;
-    font-size: 12px;
+    font-size: 10px;
     letter-spacing: 4px;
   }
 
