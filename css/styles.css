@@ -112,6 +112,10 @@ body {
   line-height: 1.5em;
 }
 
+.name{
+  margin-bottom: 5px;
+}
+
 .and{
   font-size: 10px;
 }
