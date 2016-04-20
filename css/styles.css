@@ -272,7 +272,7 @@ body {
   }
 
   .header{
-    top: 30px;
+    top: 35px;
   }
 
   .and{
@@ -280,8 +280,8 @@ body {
   }
 
   .footer{
-    bottom: 20px;
-    height: auto;
+    bottom: 35px;
+    height: 28px;
   }
 
 
