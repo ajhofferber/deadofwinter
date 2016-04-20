@@ -260,7 +260,7 @@ body {
   }
 }
 
-@media(max-width: 375px) {
+@media(max-width: 375px) and (orientation: vertical)  {
 
   .mini{
     display: none;
@@ -283,8 +283,6 @@ body {
     bottom: 35px;
     height: 28px;
   }
-
-
 
   .title-content .text {
     font-size: 10px;
