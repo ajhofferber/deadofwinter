@@ -260,7 +260,7 @@ body {
   }
 }
 
-@media(max-width: 375px) and (orientation: vertical)  {
+@media(max-width: 375px) {
 
   .mini{
     display: none;
