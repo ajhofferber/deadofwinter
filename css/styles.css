@@ -175,7 +175,6 @@ body {
 .element-1 {
   position: fixed;
   z-index: 1;
-  
   left: 0;
   right: 0;
   width: 100%;
@@ -221,7 +220,6 @@ body {
   float: left;
   z-index: 3;
   width: 100%;
-  margin-top: 3203px;
   background-color: #231F20;
 }
 
