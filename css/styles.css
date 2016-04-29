@@ -15,7 +15,7 @@
 
 body {
   min-width: none;
-  min-height: nonepx;
+  min-height: none;
   background-color: #000000;
   font-family: 'Knockout';
   color: #837451;
@@ -36,6 +36,28 @@ body {
   filter: none;
 }
 
+#top, #bottom, #left, #right {
+	background: #a5ebff;
+	position: fixed;
+  z-index: 7;
+  background-color: #817350;
+	}
+#left, #right {
+	top: 0; bottom: 0;
+	width: 40px;
+	}
+#left { left: 0; }
+#right { right: 0; }
+
+	#top, #bottom {
+		left: 0; right: 0;
+		height: 40px;
+		}
+		#top { top: 0; }
+		#bottom { bottom: 0; }
+
+
+
 .wrapper{
   display: -webkit-box;
   display: -moz-box;
@@ -44,7 +66,9 @@ body {
   display: flex;
 }
 
-.frame{
+
+
+/*.frame{
   z-index: 4;
   position: fixed;
   top: 0;
@@ -52,7 +76,7 @@ body {
   right: 0;
   left: 0;
   border: 40px solid #817350;
-}
+}*/
 
 .container {
   position: relative;
@@ -169,12 +193,16 @@ body {
 
 .svg-container{
   margin-bottom: 140px;
-   height: 0;             /* collapse the container's height */
-   width: 100%;    /* specify any width you want (a percentage value, basically) */
-   /* apply a padding using the following formula */
-   /* this formula makes sure the aspect ratio of the container equals that of the svg graphic */
-   padding-top: 7%;
-   position: relative;    /* create positioning context for svg */
+  height: 0;
+  width: 100%;
+  padding-top: 7%;
+  position: relative;
+}
+
+.line-container{
+  height: 0;
+  width: 100%;
+  position: relative;
 }
 
 .title-content .text {
@@ -189,12 +217,13 @@ body {
   height: auto;
   width: 100%;
   position: relative;
-  margin-bottom: 350px;
+  margin-bottom: 325px;
 }
 
 .container-1 {
-  height: 2120px;
-  /*margin-top: 80px;*/
+  height: auto;
+  z-index: 6;
+  bottom: 0;
 }
 
 .element-1 {
@@ -214,7 +243,7 @@ body {
 .element-4 {
   width: 80%;
   height: 1px;
-  margin: 48px auto 0;
+  margin: 40px auto 0;
 }
 
 .text-4 {
@@ -232,27 +261,38 @@ body {
   margin: 10px 0;
 }
 
+.mini{
+  font-size: 10px;
+  letter-spacing: 5px;
+  font-family: 'Knockout';
+}
+
+.white{
+  color: white;
+  font-family: 'Knockout';
+  letter-spacing: 4px;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
 .text-5 {
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;
-  /*z-index: 11;*/
   width: 100%;
-  min-height: 46px;
-  margin: 0 auto;
-  font-size: 0.583em;
-  font-weight: 400;
-  line-height: 1.38;
+  letter-spacing: 6px;
+  font-size: 10px;
   color: #817350;
+  margin-bottom: 15px;
 }
 
 .element-2 {
   position: relative;
-  float: left;
-  z-index: 3;
+  z-index: 6;
   width: 100%;
   height: auto;
+  padding-bottom: 150px;
   background-color: #231F20;
 }
 
@@ -260,7 +300,36 @@ body {
  margin-bottom: 350px;
 }
 
+.input{
+  width: 100%;
+  position: absolute;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: 8px;
+  margin-bottom: 40px;
+}
 
+.input-line{
+  font-family: 'Knockout';
+  color: #817350;
+  font-size: 14px;
+}
+
+#email_input{
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 70px;
+  margin-bottom: 200px;
+  height: 100px;
+  z-index: 6;
+  background-color: #817350;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 9px;
+  font-family: 'Knockout';
+  color: #231F20;
+  position: relative;
+}
 
 .poem-container p{
   font-family: 'Domaine';
@@ -271,11 +340,13 @@ body {
 
 .bottom-section{
   position: absolute;
-  margin-top: 200px;
+  flex-direction: row;
+  width: 100%;
+  height: 80px;
 }
 
 .bottom-left{
-  display: block;
+  bottom: 0;
   margin-left: 80px;
   position: absolute;
   text-align: left;
@@ -283,19 +354,18 @@ body {
 
 .bottom-center{
   text-align: center;
-  margin-left: 25%;
+  margin-left: 20%;
   position: absolute;
-  width: 800px;
+  width: 60%;
   height: 0;
 }
 
+
 .bottom-right{
-  right: 0;
-  display: block;
-  margin-left:
-  margin-right: 80px;
+  right: 80px;
   position: absolute;
   text-align: right;
+  bottom: 0;
 }
 
 
