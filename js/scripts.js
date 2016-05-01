@@ -15,17 +15,17 @@
 
 $(document).ready(function(){
 
-  var winHeight = $(window).height();
+  var winHeight = ($(window).height())* 1.4;
   var picHeight = $('.element-1').height()
   var offsetHeight = winHeight + picHeight *.9
-  $('.element-2').css('margin-top', offsetHeight*1.8)
-  console.log($('.element-2').css('margin-top'));
-  $('.element-1').css('bottom', -(offsetHeight) );
-  console.log($('.element-1').css('bottom'));
-
-  $(window).scroll(function(){
-    $(".element-1").css("bottom", Math.min( 0, (-(offsetHeight)+(($(this).scrollTop())*.8)) ) );
-  });
+  $('.element-2').css('margin-top', offsetHeight + "px")
+  // console.log($('.element-2').css('margin-top'));
+  $('.element-1').css('top', winHeight  + "px" );
+  // console.log($('.element-1').css('bottom'));
+  //
+  // $(window).scroll(function(){
+  //   $(".element-1").css("bottom", Math.min( 0, (-(offsetHeight)+(($(this).scrollTop())*.8)) ) );
+  // });
 
     // I only have one form on the page but you can be more specific if need be.
   var $form = $('#subscribe-form');
