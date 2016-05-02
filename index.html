@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/jquery-min.js" charset="utf-8"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
   <script src="js/scripts.js" charset="utf-8"></script>
 </head>
 <body class="body page-index clearfix">
@@ -14,12 +15,19 @@
   <div id="right"></div>
   <div id="top"></div>
   <div id="bottom"></div>
-  <div class="background"></div>
+  <div class="background">
+  <div class="scroll-container">
+    <p class="scroll text">SCROLL</p>
+    <svg viewBox="0 0 62.4 46.9" style="margin-top: -30px;">
+      <polyline fill="none" stroke="#827452" stroke-width="2" stroke-miterlimit="10" points="40.2,33 27.7,45.5 15.2,33 "/>
+    </svg>
+  </div>
+  </div>
     <div class="fixedcontainer wrapper">
       <div class="footer wrapper">
         <div class="text">
           <p class="and">AND</p>
-          <svg class="mini" width="120px" height=".5em">
+          <svg class="mini2" width="120px" height=".5em">
             <line fill="none" stroke="#817350" stroke-width="2" x1="120" y1="1" x2="0" y2="1"/>
           </svg>
           <p class="name">ANDREW</p>
@@ -28,8 +36,8 @@
       </div>
       <div class="header wrapper">
         <div class="text">
-          <p class="mini" style="font-size: 10px">BY</p>
-          <svg class="mini" width="120px" height=".5em">
+          <p class="mini2" style="font-size: 10px">BY</p>
+          <svg class="mini2" width="120px" height=".5em">
             <line fill="none" stroke="#817350" stroke-width="2" x1="120" y1="1" x2="0" y2="1"/>
           </svg>
           <p class="name">LERIN</p>
@@ -82,11 +90,11 @@
 
        <div class="container _container container-1 clearfix">
          <div class="text text-4">
-           <p>A NEW ALBUM BY</p>
+           <p class="first">A NEW ALBUM BY</p>
            <svg width="120px" height="2px" style="margin-bottom: 3px">
              <line fill="none" stroke="#817350" stroke-width="2" x1="120" y1="1" x2="0" y2="1"/>
            </svg>
-           <p>LERIN HERZER AND ANDREW JOCELYN</p>
+           <p class="second">LERIN HERZER AND ANDREW JOCELYN</p>
          </div>
 
       <div class="poem-container">
@@ -838,13 +846,12 @@
 
 
 
-      <div class="input"><p class="input_line">STAY UPDATED AND JOIN OUR MAILING LIST</p>      </div>
-      <form action="http://lerinandandrew.us13.list-manage.com/subscribe/post?" method="POST" id="subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <input type="hidden" name="u" value="a2e0e72b8a6b63aceb985e33a&amp;">
-        <input type="hidden" name="id" value="b5072a1549">
-        <input id="email_input"type="email" name="email_address" placeholder="EMAIL" style="color: #231F20; font-family: 'Knockout'">
-      </form>
-
+      <div class="input"><p class="input_line">STAY UPDATED ON THE ALBUM RELEASE</p>      </div>
+        <form id="subscribe-form" action="//lerinandandrew.us13.list-manage.com/subscribe/post?u=a2e0e72b8a6b63aceb985e33a&amp;id=b5072a1549" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        	<input type="email" value="" name="EMAIL" class="email" id="email_input" placeholder="EMAIL" required>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a2e0e72b8a6b63aceb985e33a_b5072a1549" tabindex="-1" value=""></div>
+        </form>
 
 
       <div class="bottom-section wrapper">

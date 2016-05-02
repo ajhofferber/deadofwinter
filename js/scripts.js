@@ -15,6 +15,8 @@
 
 $(document).ready(function(){
 
+  $('.scroll-container').hide().delay(3000).fadeIn(2200);
+
   var winHeight = ($(window).height())* 1.4;
   var picHeight = $('.element-1').height()
   var offsetHeight = winHeight + picHeight *.9
@@ -34,26 +36,28 @@ $(document).ready(function(){
     $('body').bind('keypress', function ( event ) {
       var key = event.which || event.keyCode;
         if (key === 13){
-          if ( event ) event.preventDefault();
+          $form.submit();
 
-          $.ajax({
-              type: "GET", // GET & url for json slightly different
-              url: "http://lerinandandrew.us13.list-manage.com.list-manage2.com/subscribe/post-json?c=?",
-              data: $form.serialize(),
-              dataType    : 'jsonp',
-              contentType: "application/json; charset=utf-8",
-              error       : function(err) { alert("Could not connect to the registration server."); },
-              success     : function(data) {
-                  if (data.result != "success") {
-                    console.log('OOPS');
-                      // Something went wrong, parse data.msg string and display message
-                  } else {
-                    console.log("DID IT");
-                      // It worked, so hide form and display thank-you message.
-                  }
-              }
-          });
-          return false;
+
+
+          // $.ajax({
+          //     type: "GET", // GET & url for json slightly different
+          //     url: "http://lerinandandrew.us13.list-manage.com.list-manage2.com/subscribe/post-json?c=?",
+          //     data: $form.serialize(),
+          //     dataType    : 'jsonp',
+          //     contentType: "application/json; charset=utf-8",
+          //     error       : function(err) { alert("Could not connect to the registration server."); },
+          //     success     : function(data) {
+          //         if (data.result != "success") {
+          //           console.log('OOPS');
+          //             // Something went wrong, parse data.msg string and display message
+          //         } else {
+          //           console.log("DID IT");
+          //             // It worked, so hide form and display thank-you message.
+          //         }
+          //     }
+          // });
+          // return false;
         };
       });
     };

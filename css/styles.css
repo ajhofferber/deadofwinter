@@ -5,7 +5,7 @@
 
 @font-face{
   font-family: 'Domaine';
-  src: url("../font/Domaine.otf");
+  src: url("../font/DomaineTextWeb-Light.woff");
 }
 
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -87,6 +87,7 @@ body {
 
 .background{
   opacity: 0;
+  display: flex;
   background: url("../img/tile.gif");
   background-repeat: repeat;
   top: 0;
@@ -135,10 +136,12 @@ body {
   right: 80px;
   width: 100%;
   height: 87px;
+  flex-direction: row;
   justify-content: flex-end;
 }
 
 .footer .text {
+  order: 2;
   width: 120px;
   position: relative;
   font-size: 14px;
@@ -174,17 +177,31 @@ body {
   font-size: 10px;
 }
 
+
+.scroll-container{
+  width: 6%;
+  position: absolute;
+  bottom: 80px;
+  margin-left: 47%;
+}
+
+.scroll {
+  font-size: 14px;
+  letter-spacing: 6px;
+  color: #817350;
+  line-height: 1.5em;
+}
+
 .title {
   position: absolute;
-  align-content: center;
+  align-self: center;
   top: 0;
   bottom: 0;
   width: 100%;
 }
 
 .title-content {
-  flex-direction: column;
-  align-items: center;
+  flex-direction:column;
   justify-content: center;
   bottom: 0;
   margin-left: 20%;
@@ -247,6 +264,7 @@ body {
   margin: 40px auto 0;
 }
 
+
 .text-4 {
   width: 52.75%;
   font-size: 14px;
@@ -299,6 +317,10 @@ body {
 
 .poem-container{
  margin-bottom: 350px;
+}
+
+.poem-container > p{
+  font-size: 21px;
 }
 
 .input{
@@ -372,6 +394,7 @@ body {
 
 
 
+
 @media(max-width: 1200px) {
   .header{
     left: 0;
@@ -385,6 +408,20 @@ body {
     justify-content: center;
   }
 
+  .scroll-container{
+    width: 6%;
+    position: absolute;
+    bottom: 80px;
+    right: 60px;
+  }
+
+  .scroll{
+    font-size: 10px;
+    transform: rotate(270deg);
+    margin-bottom: 30px;
+    margin-left: -7px;
+  }
+
   .footer .text{
     text-align: center;
   }
@@ -394,6 +431,81 @@ body {
     width: 70%;
   }
 
+  .bottom-right{
+    top: 0px;
+    margin-right: 20%;
+    position: absolute;
+    text-align: center;
+    bottom: 150px;
+  }
+
+  .bottom-left{
+    top: 0px;
+    bottom: 150px;
+    left: 20%;
+    position: absolute;
+    text-align: center;
+  }
+
+  .element-2{
+    padding-bottom: 270px;
+  }
+
+  .bottom-center {
+    margin-top: 110px;
+    margin-left: 10%;
+    width: 80%;
+  }
+
+}
+
+@media(max-width: 800px) {
+
+  .bottom-left{
+    left: 10%;
+  }
+
+  .bottom-right{
+    margin-right: 10%;
+  }
+
+  .bottom-center {
+    margin-left: 0%;
+    width: 100%;
+  }
+
+  #email_input{
+    width: 80%;
+    margin-left: 10%;
+    height: 70px;
+    margin-bottom: 150px;
+    margin-top: 50px;
+  }
+
+  .poem-container p{
+    font-family: 'Domaine';
+    font-size: 17px;
+  }
+
+  .input_line{
+    font-size: 12px;
+    letter-spacing: 6px;
+  }
+
+  .mini{
+    font-size: 10px;
+  }
+
+  .white{
+    font-size: 12px;
+  }
+
+  #left, #right {
+  	width: 30px;
+	}
+	#top, #bottom {
+		height: 30px;
+	}
 }
 
 @media(max-width: 680px )  and (orientation: landscape) {
@@ -477,8 +589,16 @@ body {
 
 @media(max-width: 375px) {
 
-  .mini{
+  #left, #right, #top, #bottom {
     display: none;
+  }
+
+  .white{
+    font-size: 10px;
+  }
+
+  .mini{
+    font-size: 8px;
   }
 
   .name{
@@ -494,8 +614,19 @@ body {
     font-size: 8px;
   }
 
+  .poem-container p{
+    font-size: 13px;
+  }
+
+  .poem-container{
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 130px;
+  }
+
+
   .footer{
-    bottom: 35px;
+    bottom: 50px;
     height: 28px;
   }
 
@@ -510,8 +641,12 @@ body {
     letter-spacing: 4px;
   }
 
-  .svg-container{
-    margin-bottom: 53px;
+  #line-break{
+    margin-bottom: 100px;
+  }
+
+  .input_line{
+    display: none;
   }
 
   .footer .text{
@@ -521,32 +656,85 @@ body {
     letter-spacing: 4px;
   }
 
-  .frame{
-    border: 15px solid #817350;
-  }
-
   .title-content {
     margin-left: 10%;
     width: 80%;
   }
 
+  #email_input{
+    width: 90%;
+    margin-left: 5%;
+    height: 60px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font-size: 14px;
+  }
+
   .element-1 {
-    position: fixed;
-    z-index: 1;
     width: 375px;
     height: 100vh;
     background-size: auto 100%;
     overflow: hidden;
   }
 
-
-  .element-2 {
-    position: relative;
-    float: left;
-    z-index: 3;
+  .bottom-section {
     width: 100%;
-    margin-top: 1700px;
-    background-color: #231F20;
+    height: 80px;
+    margin-bottom: 80px;
+}
+
+  .bottom-center{
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+  }
+
+  .element-2{
+    padding-bottom: 240px;
+    overflow: hidden;
+  }
+
+  .scroll-container{
+    left: -15px;
+    width: 50px;
+    bottom: 10px;
+    position: absolute;
+  }
+
+  .mini2{
+    display: none;
+  }
+
+  .first{
+    font-size: 8px;
+    letter-spacing: 4px;
+  }
+
+  .text-4{
+    margin: 100px auto;
+  }
+
+  .second{
+    letter-spacing: 5px;
+    font-size: 10px;
+  }
+
+  .scroll{
+    display: none;
+  }
+
+  .bottom-left{
+    text-align: center;
+  width: 30%;
+  margin-left: 25%;
+  }
+
+  .bottom-right{
+  }
+
+  .text-5{
+    font-size: 7px;
+    letter-spacing: 3px;
   }
 
 }
