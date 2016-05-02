@@ -509,7 +509,11 @@ body {
 }
 
 @media(max-width: 680px )  and (orientation: landscape) {
-  .mini{
+  .mini2{
+    display: none;
+  }
+
+  #left, #right, #top, #bottom {
     display: none;
   }
 
@@ -561,6 +565,37 @@ body {
     margin-left: 10%;
     width: 80%;
   }
+
+  .scroll{
+    display: none;
+  }
+
+  .scroll-container{
+    left: -5px;
+    width: 50px;
+    bottom: 10px;
+    position: absolute;
+  }
+
+  .element-1 {
+    /*width: 667px;
+    background-size: 100% auto;*/
+    overflow: hidden;
+  }
+
+
+
+  .text-4 {
+    width: 70%;
+    font-size: 12px;
+    letter-spacing: 6px;
+    line-height: 14px;
+    margin: 200px auto;
+    color: #817350;
+    text-align: center;
+    font-family: 'Knockout';
+  }
+
 }
 
 @media(max-width: 640px) {

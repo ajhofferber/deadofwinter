@@ -19,7 +19,10 @@ $(document).ready(function(){
 
   var winHeight = ($(window).height())* 1.4;
   var picHeight = $('.element-1').height()
+  console.log(winHeight);
+  console.log(picHeight);
   var offsetHeight = winHeight + picHeight *.9
+  console.log(offsetHeight);
   $('.element-2').css('margin-top', offsetHeight + "px")
   // console.log($('.element-2').css('margin-top'));
   $('.element-1').css('top', winHeight  + "px" );
