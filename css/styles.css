@@ -642,6 +642,7 @@ body {
   }
 
   #line-break{
+    width: 100%;
     margin-bottom: 100px;
   }
 
@@ -672,7 +673,7 @@ body {
 
   .element-1 {
     width: 375px;
-    height: 100vh;
+    height: 667px;
     background-size: auto 100%;
     overflow: hidden;
   }
@@ -724,13 +725,19 @@ body {
   }
 
   .bottom-left{
+    display: block;
     text-align: center;
-  width: 30%;
-  margin-left: 25%;
+    width: 30%;
+    margin-left: 25%;
   }
 
   .bottom-right{
-  }
+    display: block;
+    text-align: center;
+    width: 30%;
+    margin-top: 25%;
+    left: 35%;
+}
 
   .text-5{
     font-size: 7px;
