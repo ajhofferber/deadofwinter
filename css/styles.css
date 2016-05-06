@@ -208,6 +208,15 @@ body {
   position: relative;
 }
 
+.svg-container-title{
+  margin-bottom: 140px;
+  height: 0;
+  width: 100%;
+  padding-top: 7%;
+  position: relative;
+}
+
+
 
 .line-container{
   height: 0;
