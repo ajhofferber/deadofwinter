@@ -36,6 +36,14 @@ body {
   filter: none;
 }
 
+a{
+  color: white;
+}
+
+a:hover {
+  color:  #837451;
+}
+
 #top, #bottom, #left, #right {
 	background: #a5ebff;
 	position: fixed;
@@ -504,6 +512,10 @@ input::-webkit-input-placeholder{
     font-size: 10px;
   }
 
+  .svg-container-title {
+    margin-bottom: 90px;
+  }
+
   .text-4{
     font-size: 12px;
     letter-spacing: 6px;
@@ -535,10 +547,6 @@ input::-webkit-input-placeholder{
 
   #line-break{
     margin-bottom: 215px;
-  }
-
-  .svg-container-title{
-    margin-bottom: 30px;
   }
 
   .img{
