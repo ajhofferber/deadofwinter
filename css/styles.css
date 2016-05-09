@@ -42,6 +42,7 @@ a{
 
 a:hover {
   color:  #837451;
+  cursor: pointer;
 }
 
 #top, #bottom, #left, #right {
