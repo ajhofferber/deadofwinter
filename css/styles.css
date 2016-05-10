@@ -36,6 +36,15 @@ body {
   filter: none;
 }
 
+a{
+  color: white;
+}
+
+a:hover {
+  color:  #837451;
+  cursor: pointer;
+}
+
 #top, #bottom, #left, #right {
 	background: #a5ebff;
 	position: fixed;
@@ -65,18 +74,6 @@ body {
   display: -webkit-flex;
   display: flex;
 }
-
-
-
-/*.frame{
-  z-index: 4;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  border: 40px solid #817350;
-}*/
 
 .container {
   position: relative;
@@ -150,6 +147,10 @@ body {
   line-height: 1.5em;
 }
 
+.poem-paragraph {
+  display: none;
+}
+
 .header {
   z-index: 2;
   position: absolute;
@@ -179,6 +180,7 @@ body {
 
 
 .scroll-container{
+  text-align: center;
   width: 6%;
   position: absolute;
   bottom: 80px;
@@ -186,7 +188,7 @@ body {
 }
 
 .scroll {
-  font-size: 14px;
+  font-size: 10px;
   letter-spacing: 6px;
   color: #817350;
   line-height: 1.5em;
@@ -216,6 +218,16 @@ body {
   position: relative;
 }
 
+.svg-container-title{
+  margin-bottom: 140px;
+  height: 0;
+  width: 100%;
+  padding-top: 7%;
+  position: relative;
+}
+
+
+
 .line-container{
   height: 0;
   width: 100%;
@@ -235,6 +247,8 @@ body {
   width: 100%;
   position: relative;
   margin-bottom: 325px;
+  display: flex;
+  align-items:  center;
 }
 
 .container-1 {
@@ -261,12 +275,25 @@ body {
 .element-4 {
   width: 80%;
   height: 1px;
-  margin: 40px auto 0;
+  margin: 20px;
 }
 
+.img{
+  width: 10%;
+  margin-left: 45%
+}
+
+.break-lines{
+  width: 40%;
+  top: 50%;
+  position:absolute;
+}
+
+.break-lines:last-of-type{
+  right: 0;
+}
 
 .text-4 {
-  width: 52.75%;
   font-size: 14px;
   letter-spacing: 8px;
   line-height: 14px;
@@ -352,6 +379,16 @@ body {
   font-family: 'Knockout';
   color: #231F20;
   position: relative;
+  text-transform: uppercase;
+}
+
+input::-webkit-input-placeholder{
+  color:white;
+  font-style: normal;
+}
+
+.entered::-webkit-input-placeholder {
+    color: black;
 }
 
 .poem-container p{
@@ -400,6 +437,12 @@ body {
     left: 0;
     justify-content: center;
   }
+
+  .img{
+    width: 10%;
+    margin-left: 45%
+  }
+
   .header .text{
     text-align: center;
   }
@@ -418,7 +461,7 @@ body {
   .scroll{
     font-size: 10px;
     transform: rotate(270deg);
-    margin-bottom: 30px;
+    margin-bottom: 45px;
     margin-left: -7px;
   }
 
@@ -430,6 +473,7 @@ body {
     margin-left: 15%;
     width: 70%;
   }
+
 
   .bottom-right{
     top: 0px;
@@ -461,6 +505,61 @@ body {
 
 @media(max-width: 800px) {
 
+  span{
+    margin: 10px 0;
+    display: block;
+  }
+
+  .element-2{
+    padding-bottom: 219px;
+  }
+
+  .and{
+    font-size: 10px;
+  }
+
+  .svg-container-title {
+    margin-bottom: 90px;
+  }
+
+  .text-4{
+    font-size: 12px;
+    letter-spacing: 6px;
+    margin: 150px auto;
+  }
+
+  .poem-container{
+    margin-bottom: 215px;
+  }
+
+  .name{
+    font-size: 12px;
+  }
+  .mini2{
+    font-size: 10px;
+  }
+
+  .footer{
+    bottom: 60px
+  }
+
+  .header{
+    top: 60px
+  }
+
+  .title-content .text {
+    font-size: 12px;
+  }
+
+  #line-break{
+    margin-bottom: 215px;
+  }
+
+  .img{
+    width: 12.5%;
+    margin-left: 43.75%
+  }
+
   .bottom-left{
     left: 10%;
   }
@@ -480,6 +579,7 @@ body {
     height: 70px;
     margin-bottom: 150px;
     margin-top: 50px;
+    font-size: 14px;
   }
 
   .poem-container p{
@@ -509,7 +609,11 @@ body {
 }
 
 @media(max-width: 680px )  and (orientation: landscape) {
-  .mini{
+  .mini2{
+    display: none;
+  }
+
+  #left, #right, #top, #bottom {
     display: none;
   }
 
@@ -561,6 +665,40 @@ body {
     margin-left: 10%;
     width: 80%;
   }
+
+  .scroll{
+    display: none;
+  }
+
+  .scroll-container{
+    left: -5px;
+    width: 50px;
+    bottom: 10px;
+    position: absolute;
+  }
+
+  .element-1 {
+    /*width: 667px;
+    background-size: 100% auto;*/
+    overflow: hidden;
+  }
+
+  .element-2{
+    padding-bottom: 185px;
+    overflow: hidden;
+  }
+
+  .text-4 {
+    width: 70%;
+    font-size: 12px;
+    letter-spacing: 6px;
+    line-height: 14px;
+    margin: 200px auto;
+    color: #817350;
+    text-align: center;
+    font-family: 'Knockout';
+  }
+
 }
 
 @media(max-width: 640px) {
@@ -577,6 +715,8 @@ body {
     font-size: 12px;
   }
 
+
+
   .name{
     font-size: 12px;
   }
@@ -589,152 +729,164 @@ body {
 
 @media(max-width: 375px) {
 
-  #left, #right, #top, #bottom {
-    display: none;
+    #left, #right, #top, #bottom {
+      display: none;
+    }
+
+    .svg-container-title{
+      margin-bottom: 60px;
+    }
+
+    .poemline{
+      display: none;
+    }
+
+    .poem-paragraph{
+      display: block;
+    }
+
+    .white{
+      font-size: 10px;
+    }
+
+    .img{
+      width: 16%;
+      margin-left: 42%;
+    }
+
+    .mini{
+      font-size: 8px;
+    }
+
+    .name{
+      font-size: 10px;
+      display: inline-block;
+    }
+
+    .header{
+      display: none;
+    }
+
+    .and{
+      font-size: 8px;
+    }
+
+    .poem-container p{
+      font-size: 13px;
+    }
+
+    .poem-container{
+      width: 90%;
+      margin-left: 5%;
+      margin-bottom: 130px;
+      padding: 0 5%;
+    }
+
+
+    .footer{
+      display: none;
+    }
+
+    .title-content .text {
+      font-size: 10px;
+      letter-spacing: 4px;
+    }
+
+    #line-break{
+      width: 100%;
+      margin-bottom: 100px;
+    }
+
+    .input_line{
+      display: none;
+    }
+
+    .title-content {
+      margin-left: 10%;
+      width: 80%;
+    }
+
+    #email_input{
+      width: 90%;
+      margin-left: 5%;
+      height: 60px;
+      margin-bottom: 50px;
+      margin-top: 50px;
+      font-size: 10px;
+      letter-spacing: 4px;
+    }
+
+    .element-1 {
+      width: 375px;
+      height: 667px;
+      background-size: auto 100%;
+      overflow: hidden;
+    }
+
+    .bottom-section {
+      width: 100%;
+      height: 80px;
+      margin-bottom: 80px;
+    }
+
+    .bottom-center{
+      position: absolute;
+      top: 60px;
+      bottom: 0;
+    }
+
+    .element-2{
+      padding-bottom: 245px;
+      overflow: hidden;
+    }
+
+    .scroll-container{
+      left: -15px;
+      width: 50px;
+      bottom: 50px;
+      position: absolute;
+    }
+
+    .mini2{
+      display: none;
+    }
+
+    .first{
+      font-size: 8px;
+      letter-spacing: 4px;
+    }
+
+    .text-4{
+      margin: 100px auto;
+    }
+
+    .second{
+      letter-spacing: 5px;
+      font-size: 10px;
+    }
+
+    .scroll{
+      display: none;
+    }
+
+    .bottom-left{
+      display: block;
+      text-align: center;
+      width: 30%;
+      margin-left: 25%;
+    }
+
+    .bottom-right{
+      display: block;
+      text-align: center;
+      width: 30%;
+      margin-top: 25%;
+      left: 35%;
+    }
+
+    .text-5{
+      font-size: 7px;
+      letter-spacing: 3px;
+    }
+
   }
-
-  .white{
-    font-size: 10px;
-  }
-
-  .mini{
-    font-size: 8px;
-  }
-
-  .name{
-    font-size: 10px;
-    display: inline-block;
-  }
-
-  .header{
-    top: 35px;
-  }
-
-  .and{
-    font-size: 8px;
-  }
-
-  .poem-container p{
-    font-size: 13px;
-  }
-
-  .poem-container{
-    width: 90%;
-    margin-left: 5%;
-    margin-bottom: 130px;
-  }
-
-
-  .footer{
-    bottom: 50px;
-    height: 28px;
-  }
-
-  .title-content .text {
-    font-size: 10px;
-    letter-spacing: 4px;
-  }
-
-  .header .text{
-    width: 100%;
-    font-size: 10px;
-    letter-spacing: 4px;
-  }
-
-  #line-break{
-    margin-bottom: 100px;
-  }
-
-  .input_line{
-    display: none;
-  }
-
-  .footer .text{
-    width: 100%;
-    bottom: 5;
-    font-size: 10px;
-    letter-spacing: 4px;
-  }
-
-  .title-content {
-    margin-left: 10%;
-    width: 80%;
-  }
-
-  #email_input{
-    width: 90%;
-    margin-left: 5%;
-    height: 60px;
-    margin-bottom: 50px;
-    margin-top: 50px;
-    font-size: 14px;
-  }
-
-  .element-1 {
-    width: 375px;
-    height: 100vh;
-    background-size: auto 100%;
-    overflow: hidden;
-  }
-
-  .bottom-section {
-    width: 100%;
-    height: 80px;
-    margin-bottom: 80px;
-}
-
-  .bottom-center{
-    position: absolute;
-    top: 60px;
-    bottom: 0;
-  }
-
-  .element-2{
-    padding-bottom: 240px;
-    overflow: hidden;
-  }
-
-  .scroll-container{
-    left: -15px;
-    width: 50px;
-    bottom: 10px;
-    position: absolute;
-  }
-
-  .mini2{
-    display: none;
-  }
-
-  .first{
-    font-size: 8px;
-    letter-spacing: 4px;
-  }
-
-  .text-4{
-    margin: 100px auto;
-  }
-
-  .second{
-    letter-spacing: 5px;
-    font-size: 10px;
-  }
-
-  .scroll{
-    display: none;
-  }
-
-  .bottom-left{
-    text-align: center;
-  width: 30%;
-  margin-left: 25%;
-  }
-
-  .bottom-right{
-  }
-
-  .text-5{
-    font-size: 7px;
-    letter-spacing: 3px;
-  }
-
-}
