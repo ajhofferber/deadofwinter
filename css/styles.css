@@ -387,6 +387,10 @@ input::-webkit-input-placeholder{
   font-style: normal;
 }
 
+.entered::-webkit-input-placeholder {
+    color: black;
+}
+
 .poem-container p{
   font-family: 'Domaine';
   font-size: 21px;

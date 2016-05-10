@@ -18,7 +18,8 @@ $(document).ready(function(){
           $form.submit();
           $form[0].reset();
           $input.prop('disabled', true);
-          console.log($input.attr("placeholder", "THANK YOU!"));
+          $input.addClass("entered");
+          $input.attr("placeholder", "THANK YOU!");
         };
       });
     };
