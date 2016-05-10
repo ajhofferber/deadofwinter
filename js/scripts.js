@@ -9,12 +9,16 @@ $(document).ready(function(){
   $('.element-1').css('top', winHeight  + "px" );
 
   var $form = $('#subscribe-form');
+  var $input = $('.email');
 
   if ( $form.length > 0 ) {
     $('body').bind('keypress', function ( event ) {
       var key = event.which || event.keyCode;
         if (key === 13){
           $form.submit();
+          $form[0].reset();
+          $input.prop('disabled', true);
+          console.log($input.attr("placeholder", "THANK YOU!"));
         };
       });
     };
