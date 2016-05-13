@@ -65,8 +65,6 @@ a:hover {
 		#top { top: 0; }
 		#bottom { bottom: 0; }
 
-
-
 .wrapper{
   display: -webkit-box;
   display: -moz-box;
@@ -178,6 +176,32 @@ a:hover {
   font-size: 10px;
 }
 
+.album{
+  height: auto;
+  width: 50%;
+  margin-left: 25%;
+  align-self: center;
+  margin-bottom: 200px;
+}
+
+.link-to-music{
+  border: 2px solid #817350;
+  height: 100px;
+  width: 60%;
+  margin-left: 20%;
+  color: #817350;
+  margin-bottom: 200px;
+  font-family: 'Knockout';
+  text-align: center;
+  padding-top: 40px;
+  font-size: 14px;
+  letter-spacing: 6px;
+}
+
+.link-to-music:hover{
+  background-color: #817350;
+  color: #231F20;
+}
 
 .scroll-container{
   text-align: center;
@@ -512,6 +536,18 @@ input::-webkit-input-placeholder{
 
   .element-2{
     padding-bottom: 219px;
+  }
+
+  .link-to-music{
+    margin-bottom: 150px;
+    width: 70%;
+    margin-left: 15%;
+  }
+
+  .album{
+    margin-bottom: 150px;
+    width: 70%;
+    margin-left: 15%;
   }
 
   .and{
@@ -858,6 +894,23 @@ input::-webkit-input-placeholder{
 
     .text-4{
       margin: 100px auto;
+    }
+
+
+    .link-to-music{
+      width: 80%;
+      margin-left: 10%;
+      padding-top: 20px;
+      font-size: 10px;
+      letter-spacing: 4px;
+      height: 50px;
+      margin-bottom: 100px;
+    }
+
+    .album{
+      width: 80%;
+      margin-left: 10%;
+      margin-bottom: 100px;
     }
 
     .second{
