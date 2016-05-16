@@ -180,13 +180,15 @@ a:hover {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+  max-width: 800px;
 }
 
 .album{
+  margin-left: auto;
+  margin-right: auto;
   height: auto;
   width: 100%;
   margin-bottom: 200px;
-  max-width: 800px;
 }
 
 .link-to-music{
@@ -555,6 +557,10 @@ input::-webkit-input-placeholder{
     width: 70%;
   }
 
+  .album-container{
+    width: 70%;
+  }
+
   .link-to-music{
     padding-top: 30px;
     height: 75px;
@@ -565,8 +571,7 @@ input::-webkit-input-placeholder{
 
   .album{
     margin-bottom: 150px;
-    width: 70%;
-    margin-left: 15%;
+    width: 100%;
   }
 
   .and{
@@ -857,10 +862,13 @@ input::-webkit-input-placeholder{
       width: 80%;
     }
 
+    #subscribe-form{
+      width: 80%;
+    }
+
     #email_input{
-      width: 90%;
-      margin-left: 5%;
-      height: 60px;
+      width: 100%;
+      height: 55px;
       margin-bottom: 50px;
       margin-top: 50px;
       font-size: 10px;
@@ -914,17 +922,19 @@ input::-webkit-input-placeholder{
 
     .link-to-music{
       width: 80%;
-      margin-left: 10%;
       padding-top: 18px;
       font-size: 10px;
       letter-spacing: 4px;
-      height: 50px;
+      height: 55px;
       margin-bottom: 100px;
     }
 
-    .album{
+    .album-container{
       width: 80%;
-      margin-left: 10%;
+    }
+
+    .album{
+      width: 100%;
       margin-bottom: 100px;
     }
 
