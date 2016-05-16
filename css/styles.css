@@ -182,6 +182,7 @@ a:hover {
   margin-left: 25%;
   align-self: center;
   margin-bottom: 200px;
+  max-width: 800px;
 }
 
 .link-to-music{
@@ -189,13 +190,14 @@ a:hover {
   height: 100px;
   width: 60%;
   margin-left: 20%;
+  font-size: 18px;
+  letter-spacing: 9px;
+  font-family: 'Knockout';
   color: #817350;
   margin-bottom: 200px;
-  font-family: 'Knockout';
   text-align: center;
   padding-top: 40px;
-  font-size: 14px;
-  letter-spacing: 6px;
+  max-width: 800px;
 }
 
 .link-to-music:hover{
@@ -249,8 +251,6 @@ a:hover {
   padding-top: 7%;
   position: relative;
 }
-
-
 
 .line-container{
   height: 0;
@@ -542,6 +542,7 @@ input::-webkit-input-placeholder{
     margin-bottom: 150px;
     width: 70%;
     margin-left: 15%;
+    font-size: 14px;
   }
 
   .album{
@@ -751,8 +752,6 @@ input::-webkit-input-placeholder{
     font-size: 12px;
   }
 
-
-
   .name{
     font-size: 12px;
   }
@@ -900,7 +899,7 @@ input::-webkit-input-placeholder{
     .link-to-music{
       width: 80%;
       margin-left: 10%;
-      padding-top: 20px;
+      padding-top: 18px;
       font-size: 10px;
       letter-spacing: 4px;
       height: 50px;
